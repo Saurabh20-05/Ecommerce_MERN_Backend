@@ -19,7 +19,10 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "http://localhost:3000",
+      "https://ecommerce-mern-frontend-eta.vercel.app"
+    ],
     credentials: true,
   })
 );
