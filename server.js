@@ -22,9 +22,14 @@ app.use(
       "http://localhost:3000",
       "https://ecommerce-mern-frontend-eta.vercel.app"
     ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
+
+// VERY IMPORTANT
+app.options("*", cors());
 
 app.use(
   "/uploads",
